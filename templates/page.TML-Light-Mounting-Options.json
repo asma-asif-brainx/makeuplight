@@ -10,7 +10,14 @@
       "type": "rich-text",
       "settings": {
         "subheading": "",
-        "title": "Comprehensive Overview of TML Light Mounting Options",
+        "title": "Everything You Need To Know About Mounting Options",
+        "add-header-points": true,
+        "header-point-one": "Stand",
+        "header-point-two": "Suction Cup",
+        "header-point-three": "Magic Mount",
+        "header-point-four": "EZ Clamp",
+        "header-point-five": "Universal Arm",
+        "header-point-color": "#bc7c08",
         "title_size": 48,
         "title_width": 16,
         "heading_h1": false,
@@ -42,7 +49,8 @@
         "text_font_size": 16,
         "mobile_text_font_size": 14,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#010202",
+        "add-custom-styling": true
       }
     },
     "rich_text_HeMNGV": {
@@ -50,6 +58,13 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
@@ -70,18 +85,19 @@
         "enable_custom_padding": false,
         "custom_padding_top": 0,
         "custom_padding_bottom": 0,
-        "enable_custom_margin": false,
+        "enable_custom_margin": true,
         "custom_margin_top": 0,
-        "custom_margin_bottom": 0,
+        "custom_margin_bottom": 25,
         "enable_custom_background": true,
         "custom_background_color": "#f2f2f2",
         "enable_content_padding": false,
         "content_padding": 0,
         "remove_padding": true,
-        "text_font_size": 18,
+        "text_font_size": 16,
         "mobile_text_font_size": 16,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#010202",
+        "add-custom-styling": false
       }
     },
     "multi_image_custom_qGQkgR": {
@@ -165,6 +181,8 @@
         "full_width": false,
         "reduce_paddings": false,
         "image_spacing": 10,
+        "justify_content": "flex-start",
+        "image_spacing_mobile": 10,
         "border_width": 2,
         "border_color": "#000000",
         "hover_transition_duration": 0.3,

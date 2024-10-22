@@ -1,7 +1,7 @@
 {% style %}
  .section-spacing-reduced {
       padding-top: 10px !important;
-      padding-bottom: 60px !important;
+      padding-bottom: 150px !important;
   }
   
   #section-id-{{ section.id }} {
@@ -11,13 +11,16 @@
   .flexible-layout--variable-columns {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: {{  section.settings.justify_content }};
     margin: -{{ section.settings.image_spacing }}px;
+  }
+  .flexible-layout .column{
+    padding:0;
   }
   
   .flexible-layout--variable-columns .column {
     flex: 0 0 calc(33.33% - {{ section.settings.image_spacing | times: 2 }}px);
-    margin: {{ section.settings.image_spacing }}px;
+    margin: -{{ section.settings.image_spacing }}px;
     transition: all {{ section.settings.hover_transition_duration }}s ease;
   }
 
@@ -63,11 +66,20 @@
     transform: scale(1.05);
   }
   
+  
   @media (max-width: 767px) {
     .flexible-layout--variable-columns .column {
       flex: 0 0 100%;
       margin-left: 0;
     }
+
+    .flexible-layout--variable-columns .column , .flexible-layout--variable-columns{
+        margin: -{{ section.settings.image_spacing_mobile }}px;
+    }
+    .flexible-layout{
+      align-items:center;
+    }
+  
   }
 {% endstyle %}
 
@@ -247,6 +259,51 @@
       "label": "Image Spacing",
       "default": 10
     },
+
+    {
+      "type": "select",
+      "id": "justify_content",
+      "label": "Justify Content",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Flex Start"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Flex End"
+        },
+        {
+          "value": "space-between",
+          "label": "Space Between"
+        },
+        {
+          "value": "space-around",
+          "label": "Space Around"
+        },
+        {
+          "value": "space-evenly",
+          "label": "Space Evenly"
+        }
+      ]
+    },
+  
+    {
+      "type": "range",
+      "id": "image_spacing_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Image Spacing Mobile",
+      "default": 10
+    },
+
     {
       "type": "range",
       "id": "border_width",

@@ -15,7 +15,7 @@
   color: var(--subheading-color);
   font-size: var(--subheading-font-size);
   font-weight: var(--subheading-font-weight);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .custom-article-header__heading {
@@ -26,6 +26,9 @@
   margin-bottom: 0;
 }
 
+.custom-article-subhead{
+  font-style: italic;
+}
 @media screen and (max-width: 767px) {
   .custom-article-header {
     padding-top: calc(var(--padding-top) / 2);
@@ -40,5 +43,8 @@
 
   .custom-article-header__heading {
     font-size: calc(var(--heading-font-size) * 0.7);
+  }
+  .custom-article-subhead{
+    font-size: 18px;
   }
 }

@@ -10,7 +10,12 @@
       "type": "rich-text",
       "settings": {
         "subheading": "",
-        "title": "You Should Know The Trifecta of Lighting: CRI, Kelvin, and Lux",
+        "title": "Learn The Trifecta of Lighting",
+        "add-header-points": true,
+        "header-point-one": "CRI",
+        "header-point-two": "Color Temperature",
+        "header-point-three": "Lux",
+        "header-point-color": "#bc7c08",
         "title_size": 48,
         "title_width": 16,
         "heading_h1": false,
@@ -42,7 +47,8 @@
         "text_font_size": 16,
         "mobile_text_font_size": 14,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#000000",
+        "add-custom-styling": true
       }
     },
     "rich_text_KTw9cM": {
@@ -50,6 +56,11 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 24,
         "heading_h1": false,
@@ -81,7 +92,8 @@
         "text_font_size": 16,
         "mobile_text_font_size": 14,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#010202",
+        "add-custom-styling": false
       }
     },
     "multi_image_custom_6Mhnw3": {
@@ -138,7 +150,8 @@
         "alternate_bg_color": false,
         "full_width": false,
         "reduce_paddings": true,
-        "image_spacing": 10,
+        "image_spacing": 5,
+        "image_spacing_mobile": 10,
         "border_width": 3,
         "border_color": "#000000",
         "hover_transition_duration": 0.5,

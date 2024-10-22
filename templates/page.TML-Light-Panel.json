@@ -10,7 +10,14 @@
       "type": "rich-text",
       "settings": {
         "subheading": "",
-        "title": "How to Choose The Perfect Panel(s) for Every Need",
+        "title": "Choose Between The",
+        "add-header-points": true,
+        "header-point-one": "Key Light",
+        "header-point-two": "Eyelight",
+        "header-point-three": "Jet Light",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "#bc7c08",
         "title_size": 48,
         "title_width": 14,
         "heading_h1": false,
@@ -42,7 +49,8 @@
         "text_font_size": 16,
         "mobile_text_font_size": 14,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#000000",
+        "add-custom-styling": true
       }
     },
     "rich_text_kwxqJc": {
@@ -50,6 +58,13 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
@@ -78,10 +93,11 @@
         "enable_content_padding": false,
         "content_padding": 0,
         "remove_padding": false,
-        "text_font_size": 18,
+        "text_font_size": 17,
         "mobile_text_font_size": 16,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#010202",
+        "add-custom-styling": false
       }
     },
     "custom_article_header_FDGQzL": {
@@ -90,12 +106,12 @@
         "background_color": "#f2f2f2",
         "padding_top": 20,
         "padding_bottom": 20,
-        "content_max_width": 450,
+        "content_max_width": 550,
         "text_alignment": "center",
-        "subheading": "Here’s a breakdown to help you choose between\u2028the 3 portable panels!",
+        "subheading": "Here’s A Breakdown To Help You Choose Between\u2028the 3 Portable Panels!",
         "subheading_color": "#ca8300",
-        "subheading_font_size": 22,
-        "subheading_font_weight": "700",
+        "subheading_font_size": 24,
+        "subheading_font_weight": "600",
         "heading": "",
         "heading_color": "#000000",
         "heading_font_size": 36,
@@ -156,7 +172,8 @@
         "alternate_bg_color": false,
         "full_width": false,
         "reduce_paddings": false,
-        "image_spacing": 10,
+        "image_spacing": 0,
+        "image_spacing_mobile": 10,
         "border_width": 4,
         "border_color": "#000000",
         "hover_transition_duration": 0.3,

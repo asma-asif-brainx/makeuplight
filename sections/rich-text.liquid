@@ -4,8 +4,23 @@
     assign heading_tag = "h1"
   endif
 -%}
+
+{% if section.settings.add-custom-styling %}
+  {{ 'header-points.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+
 <div id="section-id-{{ section.id }}" class="section-id-{{ section.id }} cf use-{{ section.settings.color_scheme }}-bg" data-cc-animate>
   {% style %}
+
+    #shopify-section-{{ section.id }} .header-list .header-list-item {
+      color: {{ section.settings.header-point-color }};
+    }
+
+    .section-spacing{
+      margin-bottom:  {{ section.settings.custom_margin_bottom }}px;
+    }
+
     #shopify-section-{{ section.id }} {
       background-color: {{ section.settings.background_color }};
     }
@@ -112,6 +127,22 @@
         </{{ heading_tag }}>
       {% endif %}
 
+      {% if section.settings.add-header-points %}
+        <div class="header-points-main">
+          <ul class="header-list">
+            <li class="header-list-item">{{ section.settings.header-point-one }}</li>
+            <li class="header-list-item">{{ section.settings.header-point-two }}</li>
+            <li class="header-list-item">{{section.settings.header-point-three }}</li>
+            {% if  section.settings.header-point-four !=blank %}
+              <li class="header-list-item">{{ section.settings.header-point-four }}</li>
+            {% endif %}
+            {% if  section.settings.header-point-five !=blank %}
+              <li class="header-list-item">{{section.settings.header-point-five }}</li>
+            {% endif %}
+          </ul> 
+        </div>
+      {% endif %}
+
       {% if section.settings.text != blank %}
         <div class="custom_rich rte inherit-colors {% if section.settings.enlarge_text %}large-text{% endif %} align-{{ section.settings.text_alignment }}" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.3s">
           {{ section.settings.text }}
@@ -169,6 +200,45 @@
         "label": "Heading",
         "default": "Rich text"
       },
+
+      {
+        "type": "checkbox",
+        "id": "add-header-points",
+        "label": "Add header points",
+        "default":false
+      },
+      {
+        "type": "text",
+        "id": "header-point-one",
+        "label": "Header point one",
+      },
+      {
+        "type": "text",
+        "id": "header-point-two",
+        "label": "Header point two",
+      },
+      {
+        "type": "text",
+        "id": "header-point-three",
+        "label": "Header point three",
+      },
+      {
+        "type": "text",
+        "id": "header-point-four",
+        "label": "Header point four",
+      },
+      {
+        "type": "text",
+        "id": "header-point-five",
+        "label": "Header point five",
+      },
+
+      {
+        "type": "color",
+        "id": "header-point-color",
+        "label": "Header point color",
+      },
+      
       {
         "type": "range",
         "id": "title_size",
@@ -460,7 +530,14 @@
         "id": "text_color",
         "label": "Text Color",
         "default": "#010202"
+      },
+      {
+        "type": "checkbox",
+        "id": "add-custom-styling",
+        "label": "Add custom styling to header-points",
+        "default": false
       }
+      
     ],
     "blocks": [
       {

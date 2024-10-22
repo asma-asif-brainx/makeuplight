@@ -3,7 +3,7 @@
 <div class="custom-article-header custom-article-header--{{ section.id }}" style="background-color: {{ section.settings.background_color }};">
   <div class="custom-article-header__content">
     {% if section.settings.subheading != blank %}
-      <h3 class="custom-article-header__subheading">{{ section.settings.subheading }}</h3>
+      <h3 class="custom-article-subhead custom-article-header__subheading">{{ section.settings.subheading }}</h3>
     {% endif %}
     
     {% if section.settings.heading != blank %}
