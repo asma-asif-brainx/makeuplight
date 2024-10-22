@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "show_collection_content": false,
+        "show_collection_image": false,
+        "description_position": "top",
+        "layout": "rows",
+        "grid": 3,
+        "grid_mobile": "2",
+        "products_per_page": 18,
+        "enable_infinite_scroll": true,
+        "show_vendor": false,
+        "show_filter_counts": false,
+        "show_filter_deadends": false,
+        "ajax_products": true,
+        "filter_mode": "none",
+        "sticky_sidebar": true,
+        "collapse_filters_method": "none",
+        "collapse_sort_by": true,
+        "enable_sorting": false,
+        "show_featured_in_sort": false
+      }
+    },
+    "rich_text_dK4XjQ": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "title_size": 48,
+        "title_width": 12,
+        "heading_h1": false,
+        "text": "<p><strong>Let’s get real: <\/strong>your greatest power as an artist is your ability to see.\u2028<\/p><p>When you cannot see, you end up creating from your head instead of using your eye. But when an artist can see, the door to creativity opens wide.\u2028<\/p><p>Other lighting companies are happy to sell you cheap, ineffective lights, preying on the fact that most artists don’t know what good lighting looks like. They keep you in the dark—literally and figuratively.\u2028<\/p><p>TML was built to change that. Designed by Oscar-winning makeup artist <a href=\"https:\/\/themakeuplight.com\/pages\/about-tml\" title=\"https:\/\/themakeuplight.com\/pages\/about-tml\">Vivian Baker<\/a> and her photographer husband <a href=\"https:\/\/themakeuplight.com\/pages\/about-tml\" title=\"https:\/\/themakeuplight.com\/pages\/about-tml\">Michael Astalos<\/a>, TML lighting had to meet the critical demands of her artistry. Now these lights are available for all artists..<\/p><p>Explore the tabs below to learn more about the science behind our lights, our versatile panels, and mounting options. Once you’re ready, browse our top recommendations and best-sellers, chosen for their benefits and features.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "left",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "custom",
+        "color_bg": "#f2f2f2",
+        "color_text": "",
+        "reduce_padding": true,
+        "increase_text_width": true,
+        "enable_custom_padding": false,
+        "custom_padding_top": 0,
+        "custom_padding_bottom": 0,
+        "enable_custom_margin": false,
+        "custom_margin_top": 0,
+        "custom_margin_bottom": 0,
+        "enable_custom_background": false,
+        "custom_background_color": "rgba(0,0,0,0)",
+        "enable_content_padding": false,
+        "content_padding": 0,
+        "remove_padding": false,
+        "text_font_size": 16,
+        "mobile_text_font_size": 14,
+        "text_font_weight": "400",
+        "text_color": "#010202"
+      }
+    },
+    "custom_featured_collection_8XVy86": {
+      "type": "custom-featured-collection",
+      "settings": {
+        "title": "TML Recommends",
+        "product_list": [
+          "key-light-stand-kit",
+          "key-light-2-0-starter-kit-with-suction-mount",
+          "eyelight-stand-kit",
+          "eyelight-magic-kit",
+          "jet-light-kit",
+          "key-light-2-0-pro-package",
+          "eyelight-pro-kit",
+          "key-light-2-0-master-package"
+        ]
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_dK4XjQ",
+    "custom_featured_collection_8XVy86"
+  ]
+}

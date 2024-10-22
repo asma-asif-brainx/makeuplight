@@ -1,0 +1,175 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich_text_ajDGz6": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "How to Choose The Perfect Panel(s) for Every Need",
+        "title_size": 48,
+        "title_width": 14,
+        "heading_h1": false,
+        "text": "",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "custom",
+        "color_bg": "#e9e9e9",
+        "color_text": "",
+        "reduce_padding": true,
+        "increase_text_width": false,
+        "enable_custom_padding": false,
+        "custom_padding_top": 0,
+        "custom_padding_bottom": 0,
+        "enable_custom_margin": false,
+        "custom_margin_top": 0,
+        "custom_margin_bottom": 0,
+        "enable_custom_background": false,
+        "custom_background_color": "rgba(0,0,0,0)",
+        "enable_content_padding": false,
+        "content_padding": 0,
+        "remove_padding": false,
+        "text_font_size": 16,
+        "mobile_text_font_size": 14,
+        "text_font_weight": "400",
+        "text_color": "#010202"
+      }
+    },
+    "rich_text_kwxqJc": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "title_size": 48,
+        "title_width": 12,
+        "heading_h1": false,
+        "text": "<p>At The Makeup Light, we offer three versatile light panels <strong>designed to meet the specific needs of artists and professionals.<\/strong>\u2028Whether you're working in film, photography, makeup, or simply need professional lighting for your studio or vanity, each light panel has unique advantages. While one light may seem sufficient, incorporating multiple lights can enhance your setup, offering versatility and\u2028better results without overwhelming the process.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": true,
+        "color_scheme": "custom",
+        "color_bg": "#f2f2f2",
+        "color_text": "",
+        "reduce_padding": true,
+        "increase_text_width": true,
+        "enable_custom_padding": false,
+        "custom_padding_top": 0,
+        "custom_padding_bottom": 0,
+        "enable_custom_margin": false,
+        "custom_margin_top": 0,
+        "custom_margin_bottom": 0,
+        "enable_custom_background": false,
+        "custom_background_color": "rgba(0,0,0,0)",
+        "enable_content_padding": false,
+        "content_padding": 0,
+        "remove_padding": false,
+        "text_font_size": 18,
+        "mobile_text_font_size": 16,
+        "text_font_weight": "400",
+        "text_color": "#010202"
+      }
+    },
+    "custom_article_header_FDGQzL": {
+      "type": "custom-article-header",
+      "settings": {
+        "background_color": "#f2f2f2",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "content_max_width": 450,
+        "text_alignment": "center",
+        "subheading": "Here’s a breakdown to help you choose between\u2028the 3 portable panels!",
+        "subheading_color": "#ca8300",
+        "subheading_font_size": 22,
+        "subheading_font_weight": "700",
+        "heading": "",
+        "heading_color": "#000000",
+        "heading_font_size": 36,
+        "heading_font_weight": "700"
+      }
+    },
+    "multi_image_custom_UCj4pC": {
+      "type": "multi-image-custom",
+      "blocks": {
+        "text_block_bMLH3p": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant2.png",
+            "image_width": 1000,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "https:\/\/themakeuplight.com\/pages\/key-light"
+          }
+        },
+        "text_block_HGcWex": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant2_1.png",
+            "image_width": 1000,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "https:\/\/themakeuplight.com\/pages\/eye-light"
+          }
+        },
+        "text_block_9Hbyti": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant2_2.png",
+            "image_width": 1000,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "https:\/\/themakeuplight.com\/pages\/jet-light"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_bMLH3p",
+        "text_block_HGcWex",
+        "text_block_9Hbyti"
+      ],
+      "settings": {
+        "title": "",
+        "background_color": "#f2f2f2",
+        "text_alignment": "left",
+        "button_style": "primary",
+        "media_shape": "natural",
+        "alternate_bg_color": false,
+        "full_width": false,
+        "reduce_paddings": false,
+        "image_spacing": 10,
+        "border_width": 4,
+        "border_color": "#000000",
+        "hover_transition_duration": 0.3,
+        "hover_transform": "scale(1.05)",
+        "image_border_radius": 8
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_ajDGz6",
+    "rich_text_kwxqJc",
+    "custom_article_header_FDGQzL",
+    "multi_image_custom_UCj4pC"
+  ]
+}

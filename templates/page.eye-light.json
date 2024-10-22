@@ -1,0 +1,278 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "custom_article_header_MCawTW": {
+      "type": "custom-article-header",
+      "settings": {
+        "background_color": "#e9e9e9",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "content_max_width": 800,
+        "text_alignment": "center",
+        "subheading": "EyeLight",
+        "subheading_color": "#b87333",
+        "subheading_font_size": 24,
+        "subheading_font_weight": "400",
+        "heading": "The One-Light Wonder",
+        "heading_color": "#000000",
+        "heading_font_size": 48,
+        "heading_font_weight": "700"
+      }
+    },
+    "feature_with_image_9zGzD7": {
+      "type": "feature-with-image",
+      "blocks": {
+        "title_mrrRGR": {
+          "type": "title",
+          "settings": {
+            "text": "The Eyelight Panel with its long, narrow, sleek shape (18 x 5 in) delivers soft even lighting that wraps around the face. Designed to give you the maximum light coverage from a single panel the Eyelight is the ideal choice when you are forced to choose 1 light.",
+            "color": "#000000",
+            "font_size": 18,
+            "font_weight": "400",
+            "text_align": "left",
+            "max_width": 1200,
+            "padding_top": 20,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_right": 0
+          }
+        },
+        "image_74kA4D": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/e1e1.png",
+            "image_width": 600,
+            "image_height": 400,
+            "image_border_radius": 8,
+            "image_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "title_mrrRGR",
+        "image_74kA4D"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 20,
+        "padding_right": 20
+      }
+    },
+    "text_with_image_dBa4Km": {
+      "type": "text-with-image",
+      "settings": {
+        "background_color": "#f5f5f5",
+        "enable_custom_padding": true,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_left": 20,
+        "padding_right": 20,
+        "enable_max_width": true,
+        "container_max_width": 1200,
+        "enable_margin_auto": true,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "display_inline": true,
+        "enable_pre_text": true,
+        "pre_text": "Best for:",
+        "pre_text_color": "#ca8300",
+        "pre_text_size": 16,
+        "pre_text_weight": "700",
+        "pre_text_decoration": "underline",
+        "enable_pre_text_max_width": false,
+        "pre_text_max_width": 200,
+        "enable_main_text": true,
+        "main_text": "Those who want a single light to cover all bases. The long design is excellent for illuminating the face, while its lightweight nature makes it easy to transport. If you can only have one light on a stand, this is the light panel to choose.",
+        "main_text_color": "#000000",
+        "main_text_size": 18,
+        "main_text_weight": "400",
+        "main_text_alignment": "left",
+        "enable_main_text_max_width": false,
+        "main_text_max_width": 600
+      }
+    },
+    "custom_image_qdiWrw": {
+      "type": "custom-image",
+      "settings": {
+        "title": "",
+        "background_color": "#f5f5f5",
+        "padding": 0,
+        "container_width": 1200,
+        "container_color": "rgba(0,0,0,0)",
+        "border_radius": 10,
+        "inner_padding": 0,
+        "box_shadow": "",
+        "title_size": 24,
+        "title_weight": "bold",
+        "title_transform": "uppercase",
+        "title_color": "#000000",
+        "image": "shopify:\/\/shop_images\/eviv.png",
+        "image_max_width": 700,
+        "image_height": 650,
+        "image_border_radius": 5,
+        "placeholder_color": "#f5f5f5"
+      }
+    },
+    "text_with_image_YPyTBj": {
+      "type": "text-with-image",
+      "settings": {
+        "background_color": "#f5f5f5",
+        "enable_custom_padding": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_left": 20,
+        "padding_right": 20,
+        "enable_max_width": true,
+        "container_max_width": 1200,
+        "enable_margin_auto": true,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "display_inline": true,
+        "enable_pre_text": true,
+        "pre_text": "Perfect Vanity Light:",
+        "pre_text_color": "#ca8300",
+        "pre_text_size": 16,
+        "pre_text_weight": "700",
+        "pre_text_decoration": "underline",
+        "enable_pre_text_max_width": false,
+        "pre_text_max_width": 200,
+        "enable_main_text": true,
+        "main_text": "This light turns any mirror into a professional-grade vanity light with the Magic Mount setup, making it a top choice for home or those who need a travel light.",
+        "main_text_color": "#000000",
+        "main_text_size": 18,
+        "main_text_weight": "400",
+        "main_text_alignment": "left",
+        "enable_main_text_max_width": false,
+        "main_text_max_width": 600
+      }
+    },
+    "custom_image_EVhn8K": {
+      "type": "custom-image",
+      "settings": {
+        "title": "",
+        "background_color": "#f5f5f5",
+        "padding": 20,
+        "container_width": 1200,
+        "container_color": "rgba(0,0,0,0)",
+        "border_radius": 10,
+        "inner_padding": 0,
+        "box_shadow": "",
+        "title_size": 24,
+        "title_weight": "bold",
+        "title_transform": "uppercase",
+        "title_color": "#000000",
+        "image": "shopify:\/\/shop_images\/u1u1.png",
+        "image_max_width": 700,
+        "image_height": 650,
+        "image_border_radius": 5,
+        "placeholder_color": "#f0f0f0"
+      }
+    },
+    "multi_image_custom_yY4BFW": {
+      "type": "multi-image-custom",
+      "blocks": {
+        "text_block_dABpkk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/n1.png",
+            "image_width": 1000,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_ikDEhm": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/n2.png",
+            "image_width": 1000,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_dABpkk",
+        "text_block_ikDEhm"
+      ],
+      "settings": {
+        "title": "",
+        "background_color": "#f5f5f5",
+        "text_alignment": "left",
+        "button_style": "primary",
+        "media_shape": "natural",
+        "alternate_bg_color": false,
+        "full_width": false,
+        "reduce_paddings": false,
+        "image_spacing": 10,
+        "border_width": 2,
+        "border_color": "#000000",
+        "hover_transition_duration": 0.3,
+        "hover_transform": "scale(1.05)",
+        "image_border_radius": 0
+      }
+    },
+    "text_with_image_Her73P": {
+      "type": "text-with-image",
+      "settings": {
+        "background_color": "#f5f5f5",
+        "enable_custom_padding": true,
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_left": 20,
+        "padding_right": 20,
+        "enable_max_width": true,
+        "container_max_width": 1200,
+        "enable_margin_auto": true,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_left": 0,
+        "margin_right": 0,
+        "display_inline": true,
+        "enable_pre_text": true,
+        "pre_text": "PERFECT FOR:",
+        "pre_text_color": "#ca8300",
+        "pre_text_size": 16,
+        "pre_text_weight": "700",
+        "pre_text_decoration": "underline",
+        "enable_pre_text_max_width": false,
+        "pre_text_max_width": 200,
+        "enable_main_text": true,
+        "main_text": "Artists who need a versatile, one-light solution that can transition seamlessly between workspaces.",
+        "main_text_color": "#000000",
+        "main_text_size": 18,
+        "main_text_weight": "400",
+        "main_text_alignment": "left",
+        "enable_main_text_max_width": false,
+        "main_text_max_width": 600
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_article_header_MCawTW",
+    "feature_with_image_9zGzD7",
+    "text_with_image_dBa4Km",
+    "custom_image_qdiWrw",
+    "text_with_image_YPyTBj",
+    "custom_image_EVhn8K",
+    "multi_image_custom_yY4BFW",
+    "text_with_image_Her73P"
+  ]
+}

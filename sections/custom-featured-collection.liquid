@@ -1,0 +1,366 @@
+{% style %}
+  .custom-featured-collection {
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .custom-featured-collection__header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .custom-featured-collection__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .product-slider {
+    position: relative;
+    padding: 0 40px; /* Add padding to make room for arrows */
+  }
+  .product-list {
+    display: flex;
+    gap: 20px;
+  }
+  .product-card {
+    flex: 0 0 calc(33.333% - 14px);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card__tag {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .product-card__tag--best-seller {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  .product-card__tag--pro-choice {
+    background-color: #c9a95c;
+  }
+  .product-card__tag--tml-recommends {
+    background-color: #e6d7b8;
+    color: #333;
+  }
+  .product-card__image-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  .product-card__image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .product-card__info {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+  }
+  .product-card__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .product-card__price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .product-card__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .product-card__button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .product-card__button--primary {
+    background-color: #000;
+    color: #fff;
+  }
+  .product-card__button--secondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for depth */
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+  .swiper-button-next {
+    right: 10px;
+  }
+  .swiper-button-prev svg,
+  .swiper-button-next svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff; /* Change to fill for a solid arrow */
+  }
+  .swiper-button-prev svg path,
+  .swiper-button-next svg path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #000;
+  }
+  @media (max-width: 767px) {
+    .product-slider {
+      padding: 0 20px;
+    }
+    .swiper-button-prev {
+      left: -10px;
+    }
+    .swiper-button-next {
+      right: -10px;
+    }
+  }
+{% endstyle %}
+
+<div class="custom-featured-collection">
+  <div class="custom-featured-collection__header">
+    <h2 class="custom-featured-collection__title">{{ section.settings.title }}</h2>
+  </div>
+
+  <div class="product-slider swiper-container">
+    <div class="product-list swiper-wrapper">
+      {% for product in section.settings.product_list %}
+        <div class="product-card swiper-slide">
+          {% if product.tags contains 'best-seller' %}
+            <div class="product-card__tag product-card__tag--best-seller">
+              Best Seller
+            </div>
+          {% elsif product.tags contains 'pro-choice' %}
+            <div class="product-card__tag product-card__tag--pro-choice">
+              Pro's Choice
+            </div>
+          {% elsif product.tags contains 'tml-recommends' %}
+            <div class="product-card__tag product-card__tag--tml-recommends">
+              TML Recommends
+            </div>
+          {% endif %}
+          
+          <a href="{{ product.url }}" class="product-card__image-wrapper">
+            <img src="{{ product.featured_image | img_url: '400x400', crop: 'center' }}" 
+                 alt="{{ product.title }}" 
+                 class="product-card__image"
+                 width="400" 
+                 height="400" 
+                 loading="lazy">
+          </a>
+          <div class="product-card__info">
+            <h3 class="product-card__title">{{ product.title }}</h3>
+            <p class="product-card__price">{{ product.price | money }}</p>
+            <div class="product-card__buttons">
+              <button class="product-card__button product-card__button--primary js-add-to-cart" data-variant-id="{{ product.variants.first.id }}">Add to cart</button>
+              <a href="{{ product.url }}" class="product-card__button product-card__button--secondary js-quick-view" data-cc-quick-buy="{{ product.url }}">Quick view</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-prev">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "TML Recommends"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const productSlider = new Swiper('.product-slider', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+
+    // Add to cart functionality
+    document.querySelectorAll('.js-add-to-cart').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const variantId = this.dataset.variantId;
+        addToCart(variantId);
+      });
+    });
+
+    // Quick view functionality
+    document.querySelectorAll('.js-quick-view').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const productUrl = this.getAttribute('data-cc-quick-buy');
+        if (productUrl) {
+          // Use the theme's built-in quick view functionality
+          fetch(productUrl)
+            .then(response => response.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const quickBuyContent = doc.querySelector('.quickbuy-content');
+              
+              if (quickBuyContent) {
+                // Create and show the modal
+                const modal = document.createElement('div');
+                modal.className = 'theme-modal theme-modal--fullscreen';
+                modal.innerHTML = `
+                  <div class="inner">
+                    <a href="#" data-modal-close class="modal-close">&times;</a>
+                    <div class="quickbuy-content-container"></div>
+                  </div>
+                `;
+                modal.querySelector('.quickbuy-content-container').appendChild(quickBuyContent);
+                document.body.appendChild(modal);
+                
+                // Initialize the quick buy content
+                if (typeof theme.initQuickBuy === 'function') {
+                  theme.initQuickBuy();
+                }
+                
+                // Show the modal
+                setTimeout(() => {
+                  modal.classList.add('reveal');
+                }, 10);
+                
+                // Close modal functionality
+                modal.querySelector('[data-modal-close]').addEventListener('click', (e) => {
+                  e.preventDefault();
+                  modal.classList.remove('reveal');
+                  setTimeout(() => {
+                    modal.remove();
+                  }, 300);
+                });
+              }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+      });
+    });
+
+    function addToCart(variantId) {
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: [{
+            id: variantId,
+            quantity: 1
+          }]
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Product added to cart:', data);
+        
+        // Redirect to the cart page
+        window.location.href = '/cart';
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    }
+  });
+</script>

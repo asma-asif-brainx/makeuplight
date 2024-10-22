@@ -1,0 +1,156 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich_text_wQ9nkb": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "You Should Know The Trifecta of Lighting: CRI, Kelvin, and Lux",
+        "title_size": 48,
+        "title_width": 16,
+        "heading_h1": false,
+        "text": "",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "custom",
+        "color_bg": "#e9e9e9",
+        "color_text": "",
+        "reduce_padding": false,
+        "increase_text_width": false,
+        "enable_custom_padding": false,
+        "custom_padding_top": 0,
+        "custom_padding_bottom": 0,
+        "enable_custom_margin": false,
+        "custom_margin_top": 0,
+        "custom_margin_bottom": 0,
+        "enable_custom_background": false,
+        "custom_background_color": "rgba(0,0,0,0)",
+        "enable_content_padding": false,
+        "content_padding": 0,
+        "remove_padding": false,
+        "text_font_size": 16,
+        "mobile_text_font_size": 14,
+        "text_font_weight": "400",
+        "text_color": "#010202"
+      }
+    },
+    "rich_text_KTw9cM": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "title_size": 48,
+        "title_width": 24,
+        "heading_h1": false,
+        "text": "<p>At The Makeup Light, our lights are designed to give you perfect color accuracy <strong>(CRI)<\/strong>, a balanced color temperature <strong>(Kelvin)<\/strong>, and the right amount of light <strong>(Lux)<\/strong> to get the job done right.\u2028\u2028<\/p><p>Together, these three features ensure that makeup looks flawless, whether you're on set, taking photos, or working in a studio. Our lights provide natural-looking, even illumination and are easy on the eyes, giving you professional-quality results every time. Explore an in-depth exploration of each component of the trifecta, along with its significance for makeup artists.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "custom",
+        "color_bg": "#f2f2f2",
+        "color_text": "",
+        "reduce_padding": true,
+        "increase_text_width": true,
+        "enable_custom_padding": false,
+        "custom_padding_top": 0,
+        "custom_padding_bottom": 0,
+        "enable_custom_margin": false,
+        "custom_margin_top": 0,
+        "custom_margin_bottom": 0,
+        "enable_custom_background": false,
+        "custom_background_color": "rgba(0,0,0,0)",
+        "enable_content_padding": false,
+        "content_padding": 0,
+        "remove_padding": false,
+        "text_font_size": 16,
+        "mobile_text_font_size": 14,
+        "text_font_weight": "400",
+        "text_color": "#010202"
+      }
+    },
+    "multi_image_custom_6Mhnw3": {
+      "type": "multi-image-custom",
+      "blocks": {
+        "text_block_643XeW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant2_4.png",
+            "image_width": 900,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "shopify:\/\/pages\/understanding-cri"
+          }
+        },
+        "text_block_EwMJFk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant3.png",
+            "image_width": 900,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "shopify:\/\/pages\/color-temperature"
+          }
+        },
+        "text_block_39fXkH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Property_1_Variant2_3.png",
+            "image_width": 900,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "shopify:\/\/pages\/understanding-lux"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_643XeW",
+        "text_block_EwMJFk",
+        "text_block_39fXkH"
+      ],
+      "settings": {
+        "title": "",
+        "background_color": "#f2f2f2",
+        "text_alignment": "left",
+        "button_style": "primary",
+        "media_shape": "natural",
+        "alternate_bg_color": false,
+        "full_width": false,
+        "reduce_paddings": true,
+        "image_spacing": 10,
+        "border_width": 3,
+        "border_color": "#000000",
+        "hover_transition_duration": 0.5,
+        "hover_transform": "translateY(-5px)",
+        "image_border_radius": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_wQ9nkb",
+    "rich_text_KTw9cM",
+    "multi_image_custom_6Mhnw3"
+  ]
+}
