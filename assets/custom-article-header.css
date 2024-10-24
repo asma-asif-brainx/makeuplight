@@ -21,13 +21,13 @@
 .custom-article-header__heading {
   color: var(--heading-color);
   font-size: var(--heading-font-size);
-  font-weight: var(--heading-font-weight);
+  font-weight: var(--heading-font-weight) !important;
   line-height: 1.2;
   margin-bottom: 0;
 }
 
 .custom-article-subhead{
-  font-style: italic;
+  font-style: var(--subheading-font-style);
 }
 @media screen and (max-width: 767px) {
   .custom-article-header {

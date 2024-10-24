@@ -14,14 +14,16 @@
         "padding_bottom": 50,
         "content_max_width": 550,
         "text_alignment": "center",
-        "subheading": "Understanding Color Temperature And Kelvin:",
+        "subheading": "Why It Matters For Your Makeup Artistry",
         "subheading_color": "#b87333",
         "subheading_font_size": 18,
-        "subheading_font_weight": "400",
-        "heading": "Why It Matters For Your Makeup Artistry",
+        "subheading_font_weight": "600",
+        "subheading_font_style": "normal",
+        "heading": "Understanding Color Temperature And Kelvin",
         "heading_color": "#000000",
         "heading_font_size": 48,
-        "heading_font_weight": "700"
+        "mobile_heading_font_size": 24,
+        "heading_font_weight": "600"
       }
     },
     "rich_text_VfLTcr": {
@@ -29,10 +31,18 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
         "text": "<p>Color temperature refers to the warmth or coolness of light, measured in Kelvin (K). The Kelvin Scale is a measurement system used to describe the color temperature of light sources. It starts at absolute ZERO (0K) and measures how light shifts from warm to cool tones as the temperature increases.<\/p>",
+        "remove-text-top-margin": false,
         "image_width": 120,
         "button_label": "",
         "button_link": "",
@@ -56,11 +66,17 @@
         "custom_background_color": "rgba(0,0,0,0)",
         "enable_content_padding": false,
         "content_padding": 0,
-        "remove_padding": false,
+        "remove_padding": true,
         "text_font_size": 18,
         "mobile_text_font_size": 16,
-        "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_font_weight": "500",
+        "text_color": "#010202",
+        "add-custom-subhead-style": false,
+        "custom-subhead-font-size": 18,
+        "custom-subhead-decoration": "none",
+        "custom-subhead-font-weight": "400",
+        "custom-subhead-font-style": "normal",
+        "add-custom-styling": false
       }
     },
     "custom_image_KwAt6m": {
@@ -68,7 +84,8 @@
       "settings": {
         "title": "",
         "background_color": "#f2f2f2",
-        "padding": 20,
+        "padding": 10,
+        "padding-mobile": 20,
         "container_width": 1100,
         "container_color": "rgba(0,0,0,0)",
         "border_radius": 10,
@@ -79,9 +96,9 @@
         "title_transform": "uppercase",
         "title_color": "#000000",
         "image": "shopify:\/\/shop_images\/image.png",
-        "image_max_width": 1250,
-        "image_height": 600,
-        "image_border_radius": 5,
+        "image_max_width": 1050,
+        "image_height": 500,
+        "image_border_radius": 20,
         "placeholder_color": "#f0f0f0"
       }
     },
@@ -90,10 +107,18 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
         "text": "<p>White light on the Kelvin scale typically falls between 5000K and 5500K. This range is considered “neutral” or “daylight” white, balancing warm and cool tones. Around 5000K-5500K is often referred to as pure white light, similar to midday sunlight. It’s the most accurate for revealing true colors, making it ideal for makeup application, photography, and other tasks requiring color precision.<\/p><p>Now that we understand CRI (Color Rendering Index) and how crucial it is for accurately seeing colors, it’s important to recognize that your eye relies on the color in light to perceive the world correctly. Kelvin temperature acts like a hue that colors the subject or scene, affecting how we see skin tones, makeup, and objects. Warmer Kelvin values add a yellowish hue, while cooler ones introduce a blue cast, each impacting how true-to-life or flattering the colors appear. Therefore, choosing a neutral white color temp ( 5200) with a high CRI (97+) is critical for your eye to see the colors correctly.\u2028<\/p><p>Camera’s can handle Color temps different from Makeup Artist. Cameras are designed to adapt to a wide range of lighting conditions and can adjust white balance to make colors appear correct regardless of the light’s color temperature. A camera can compensate for warm or cool tones automatically or through settings.<\/p><p>A makeup artist needs to see colors as accurately as possible under natural lighting conditions, without artificial adjustments. Using a neutral color temperature (5000-5500K) ensures that makeup looks correct across all environments.\u2028<\/p><p>At The Makeup Light, we are committed to maintaining an accurate 5200K color temperature, delivering consistent, pure white light that professionals can rely on. Our focus on quality and precision ensures that the light is not only \"daylight balanced\" by definition but also performs well in real-world conditions where accurate color rendering is critical.<\/p>",
+        "remove-text-top-margin": false,
         "image_width": 120,
         "button_label": "",
         "button_link": "",
@@ -120,8 +145,14 @@
         "remove_padding": false,
         "text_font_size": 18,
         "mobile_text_font_size": 16,
-        "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_font_weight": "500",
+        "text_color": "#010202",
+        "add-custom-subhead-style": false,
+        "custom-subhead-font-size": 18,
+        "custom-subhead-decoration": "none",
+        "custom-subhead-font-weight": "400",
+        "custom-subhead-font-style": "normal",
+        "add-custom-styling": false
       }
     },
     "multi_image_custom_DK8wAn": {
@@ -205,11 +236,18 @@
         "full_width": false,
         "reduce_paddings": true,
         "image_spacing": 10,
+        "positive-margin": true,
+        "images-gap": 35,
+        "images-row-gap": 35,
+        "justify_content": "center",
+        "image_spacing_mobile": 0,
         "border_width": 2,
         "border_color": "#000000",
         "hover_transition_duration": 0.3,
         "hover_transform": "scale(1.05)",
-        "image_border_radius": 0
+        "image_border_radius": 0,
+        "image_section_padding_bottom": 150,
+        "remove-mobile-img-container-padding": true
       }
     }
   },

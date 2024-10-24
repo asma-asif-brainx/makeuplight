@@ -2,12 +2,12 @@
 
 <div class="custom-article-header custom-article-header--{{ section.id }}" style="background-color: {{ section.settings.background_color }};">
   <div class="custom-article-header__content">
-    {% if section.settings.subheading != blank %}
-      <h3 class="custom-article-subhead custom-article-header__subheading">{{ section.settings.subheading }}</h3>
-    {% endif %}
-    
     {% if section.settings.heading != blank %}
       <h1 class="custom-article-header__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <h3 class="custom-article-subhead custom-article-header__subheading">{{ section.settings.subheading }}</h3>
     {% endif %}
   </div>
 </div>
@@ -23,7 +23,9 @@
     --subheading-font-weight: {{ section.settings.subheading_font_weight }};
     --heading-color: {{ section.settings.heading_color }};
     --heading-font-size: {{ section.settings.heading_font_size }}px;
+    --mobile-heading-font-size : {{ section.settings.mobile_heading_font_size }};
     --heading-font-weight: {{ section.settings.heading_font_weight }};
+    --subheading-font-style: {{ section.settings.subheading_font_style }};
   }
 </style>
 
@@ -114,6 +116,26 @@
       "default": "400"
     },
     {
+"type": "select",
+      "id": "subheading_font_style",
+      "label": "Subheading Font Style",
+      "default": "italic",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        },
+        {
+          "value": "oblique",
+          "label": "Oblique"
+        }
+      ]
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "Heading",
@@ -134,6 +156,16 @@
       "unit": "px",
       "label": "Heading Font Size",
       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_font_size",
+      "min": 20,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile heading Font Size",
+      "default": 24
     },
     {
       "type": "select",

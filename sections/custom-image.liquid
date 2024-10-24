@@ -43,9 +43,17 @@
     object-fit: cover;
     border-radius: {{ section.settings.image_border_radius }}px;
   }
+
+  {% if section.settings.apply-bottom-padding %}
+    #shopify-section-{{ section.id }} .custom-img-main {
+      padding-bottom: {{ section.settings.bottom-padding }}px;
+    }
+  {% endif %}
+
   @media screen and (max-width: 768px) {
     .custom-image-{{ section.id }} {
-      padding: calc({{ section.settings.padding }}px / 2);
+      padding-left: {{ section.settings.padding-mobile }}px;
+      padding-right: {{ section.settings.padding-mobile }}px;
     }
     .custom-image-{{ section.id }} .container {
       padding: calc({{ section.settings.inner_padding }}px / 2);
@@ -53,7 +61,7 @@
   }
 </style>
 
-<div class="custom-image-{{ section.id }}">
+<div class="custom-img-main custom-image-{{ section.id }}">
   <div class="container">
     <h2>{{ section.settings.title }}</h2>
     
@@ -100,6 +108,16 @@
       "unit": "px",
       "label": "Section Padding",
       "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Padding Mobile",
+      "default": 40
     },
     {
       "type": "range",
@@ -221,6 +239,22 @@
       "id": "placeholder_color",
       "label": "Placeholder Color",
       "default": "#f0f0f0"
+    },
+    {
+      "type" : "checkbox",
+      "id" :"apply-bottom-padding",
+      "label" : "Apply bottom padding",
+      "default" : false
+    },
+    {
+      "type": "range",
+      "id": "bottom-padding",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 0
     }
   ],
   "presets": [

@@ -180,7 +180,7 @@
         "alternate_bg_color": false,
         "full_width": false,
         "reduce_paddings": false,
-        "image_spacing": 10,
+        "image_spacing": 8,
         "justify_content": "flex-start",
         "image_spacing_mobile": 10,
         "border_width": 2,

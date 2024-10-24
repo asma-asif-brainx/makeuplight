@@ -11,10 +11,18 @@
       "settings": {
         "subheading": "",
         "title": "Universal Arm",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
         "text": "",
+        "remove-text-top-margin": false,
         "image_width": 120,
         "button_label": "",
         "button_link": "",
@@ -42,7 +50,13 @@
         "text_font_size": 16,
         "mobile_text_font_size": 14,
         "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_color": "#010202",
+        "add-custom-subhead-style": false,
+        "custom-subhead-font-size": 18,
+        "custom-subhead-decoration": "none",
+        "custom-subhead-font-weight": "400",
+        "custom-subhead-font-style": "normal",
+        "add-custom-styling": false
       }
     },
     "rich_text_4PWEbe": {
@@ -50,10 +64,18 @@
       "settings": {
         "subheading": "",
         "title": "",
+        "add-header-points": false,
+        "header-point-one": "",
+        "header-point-two": "",
+        "header-point-three": "",
+        "header-point-four": "",
+        "header-point-five": "",
+        "header-point-color": "",
         "title_size": 48,
         "title_width": 12,
         "heading_h1": false,
         "text": "<p>While this is not a mount on its own, the Universal Arm is a robust, double ball head unit that offers complete freedom of movement—hence the name \"Universal\"! Whether you’re using the Key Light, Eyelight, or Jet Light, the Universal Arm easily attaches to the Light Stand, giving you precise control over light direction.<\/p><p>\u2028With its considerable extension, you can aim your light in virtually any direction—even straight down! This makes it ideal for brow and lash technicians, microbladers, nail technicians, tattoo artists, and even flat-lay photographers.<\/p><p>\u2028We strongly recommend pairing the Universal Arm with your Jet Light Panel for added stability. While the Gooseneck can support the Jet Light, the Universal Arm provides significantly more support and control, especially for heavier setups.<\/p>",
+        "remove-text-top-margin": false,
         "image_width": 120,
         "button_label": "",
         "button_link": "",
@@ -80,8 +102,14 @@
         "remove_padding": false,
         "text_font_size": 18,
         "mobile_text_font_size": 16,
-        "text_font_weight": "400",
-        "text_color": "#010202"
+        "text_font_weight": "500",
+        "text_color": "#010202",
+        "add-custom-subhead-style": false,
+        "custom-subhead-font-size": 18,
+        "custom-subhead-decoration": "none",
+        "custom-subhead-font-weight": "400",
+        "custom-subhead-font-style": "normal",
+        "add-custom-styling": false
       }
     },
     "custom_image_7iihhB": {
@@ -90,7 +118,8 @@
         "title": "",
         "background_color": "#f2f2f2",
         "padding": 0,
-        "container_width": 1200,
+        "padding-mobile": 20,
+        "container_width": 550,
         "container_color": "rgba(0,0,0,0)",
         "border_radius": 10,
         "inner_padding": 0,
@@ -102,8 +131,10 @@
         "image": "shopify:\/\/shop_images\/UniversalArm-v02.gif",
         "image_max_width": 500,
         "image_height": 500,
-        "image_border_radius": 5,
-        "placeholder_color": "#f0f0f0"
+        "image_border_radius": 20,
+        "placeholder_color": "#f0f0f0",
+        "apply-bottom-padding": true,
+        "bottom-padding": 120
       }
     },
     "feature_with_image_a9zWwR": {
@@ -112,6 +143,9 @@
         "subtitle_crUmRE": {
           "type": "subtitle",
           "settings": {
+            "subtitle-decoration": "none",
+            "subtitle-font-style": "normal",
+            "remove-subtitle-margin": false,
             "text": "Pros:",
             "color": "#ca8300",
             "font_size": 16,
@@ -127,6 +161,13 @@
         "title_NbmH9N": {
           "type": "title",
           "settings": {
+            "add-built-in-title": true,
+            "add-custom-title": false,
+            "add-custom-bullets": false,
+            "custom-title-pre-text": "",
+            "pre-title-text-decoration": "none",
+            "custom-title-text": "",
+            "remove-title-margin": false,
             "text": "• Great for Large Spaces: The stand can cover a wide area, making it perfect for open studios, large sets, or room-wide lighting needs.",
             "color": "#333333",
             "font_size": 16,

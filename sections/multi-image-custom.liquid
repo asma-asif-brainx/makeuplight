@@ -1,18 +1,24 @@
 {% style %}
  .section-spacing-reduced {
       padding-top: 10px !important;
-      padding-bottom: 150px !important;
+      padding-bottom: {{  section.settings.image_section_padding_bottom }}px;
   }
   
   #section-id-{{ section.id }} {
     background-color: {{ section.settings.background_color }};
   }
-  
+
   .flexible-layout--variable-columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: {{  section.settings.justify_content }};
-    margin: -{{ section.settings.image_spacing }}px;
+    margin: 
+    {% if section.settings.positive-margin %} {{ section.settings.image_spacing }}px;
+    {% else %} -{{ section.settings.image_spacing }}px;
+    {% endif %}
+
+    gap: {{ section.settings.images-gap  }}px;
+    row-gap: {{ section.settings.images-row-gap  }}px;
   }
   .flexible-layout .column{
     padding:0;
@@ -72,6 +78,9 @@
       flex: 0 0 100%;
       margin-left: 0;
     }
+    .flexible-layout--variable-columns{
+      gap: {{ section.settings.mobile-images-gap }}px;
+    }
 
     .flexible-layout--variable-columns .column , .flexible-layout--variable-columns{
         margin: -{{ section.settings.image_spacing_mobile }}px;
@@ -79,7 +88,13 @@
     .flexible-layout{
       align-items:center;
     }
-  
+      
+    {% if section.settings.remove-mobile-img-container-padding %}
+     #section-id-{{ section.id }} .custom-container {
+        padding:0 !important;
+     }
+   {% endif %}
+
   }
 {% endstyle %}
 
@@ -99,7 +114,7 @@
     {% if section.settings.full_width %}
       <div class="wide-container">
     {% else %}
-      <div class="container container--large">
+      <div class="custom-container container container--large">
     {% endif %}
       <div class="flexible-layout flexible-layout--variable-columns flexible-layout--columns-{{ section.blocks.size }} align-{{ section.settings.text_alignment }}">
         {% for block in section.blocks %}
@@ -259,6 +274,28 @@
       "label": "Image Spacing",
       "default": 10
     },
+    {
+      "type": "checkbox",
+      "id": "positive-margin",
+      "label": "Positive margin",
+      "default": false
+    },
+    
+    {
+      "type" : "number",
+      "id" : "images-gap",
+      "label" : "Images gap" 
+    },
+    {
+      "type" : "number",
+      "id" : "images-row-gap",
+      "label" : "Images row gap" 
+    },
+    {
+      "type" : "number",
+      "id" : "mobile-images-gap",
+      "label" : "Mobile Images gap" 
+    },
 
     {
       "type": "select",
@@ -363,7 +400,26 @@
       "unit": "px",
       "label": "Image Border Radius",
       "default": 0
+    },
+
+    {
+      "type": "range",
+      "id": "image_section_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Image section padding bottom",
+      "default": 150
+    },
+    {
+      "type": "checkbox",
+      "id": "remove-mobile-img-container-padding",
+      "label": "Remove mobile img container padding",
+      "default": false
     }
+    
+    
   ],
   "blocks": [
     {

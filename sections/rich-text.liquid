@@ -17,9 +17,10 @@
       color: {{ section.settings.header-point-color }};
     }
 
-    .section-spacing{
+    #shopify-section-{{ section.id }} .section-spacing{
       margin-bottom:  {{ section.settings.custom_margin_bottom }}px;
     }
+
 
     #shopify-section-{{ section.id }} {
       background-color: {{ section.settings.background_color }};
@@ -29,6 +30,12 @@
     color: {{ section.settings.text_color }};
     font-weight: {{ section.settings.text_font_weight }};
     }
+    {% if section.settings.remove-text-top-margin  %}
+       #shopify-section-{{ section.id }} .custom_rich p{
+          margin-top: 0;
+       }
+    {% endif %}
+  
     #shopify-section-{{ section.id }} .section-spacing {
       {% if section.settings.remove_padding %}
         padding: 20px !important;
@@ -37,6 +44,17 @@
         padding-bottom: 50px !important;
       {% endif %}
     }
+
+    {% if section.settings.add-custom-subhead-style %}
+      #shopify-section-{{ section.id }} .feature-subheader{
+        font-size: {{ section.settings.custom-subhead-font-size }}px;
+        text-decoration: {{ section.settings.custom-subhead-decoration }};
+        font-weight: {{ section.settings.custom-subhead-font-weight }};
+        font-style: {{ section.settings.custom-subhead-font-style }};
+      }
+    {% endif %}
+
+
 
     {% if section.settings.color_scheme == "custom" %}
       #shopify-section-{{ section.id }} {
@@ -60,6 +78,16 @@
     #section-id-{{ section.id }} .section-rich-text__image .rimage-outer-wrapper {
       width: {{ section.settings.image_width }}px;
     }
+
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'special_text' %}
+            #shopify-section-{{ section.id }} .special-text {
+              font-style :  {{ block.settings.special_text_font_style }};
+              text-decoration : {{ block.settings.text_decoration }};
+            }
+        {% endcase %}
+      {% endfor %}
 
     @media (min-width: 768px) {
       #section-id-{{ section.id }} .feature-header {
@@ -271,6 +299,12 @@
         "id": "text",
         "label": "Text",
         "default": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store. Add <strong>bold<\/strong>, <em>italic<\/em> and <a href=\"\/\" title=\"\/\">hyperlinks<\/a>.<\/p>"
+      },
+      {
+        "type": "checkbox",
+        "id": "remove-text-top-margin",
+        "label": "Remove text top margin",
+        "default": false
       },
       {
         "type": "image_picker",
@@ -521,6 +555,7 @@
         "label": "Text Font Weight",
         "options": [
           { "value": "400", "label": "Normal" },
+          { "value": "500", "label": "Medium" },
           { "value": "700", "label": "Bold" }
         ],
         "default": "400"
@@ -533,10 +568,62 @@
       },
       {
         "type": "checkbox",
-        "id": "add-custom-styling",
-        "label": "Add custom styling to header-points",
+        "id": "add-custom-subhead-style",
+        "label": "Add custom subhead style",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "custom-subhead-font-size",
+        "min": 10,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "Custom subhead font size",
+        "default": 18
+      },
+      
+      {
+        "type": "select",
+        "id": "custom-subhead-decoration",
+        "label": "Subheading Decoration",
+        "options": [
+          { "value": "none", "label": "None" },
+          { "value": "underline", "label": "Underline" },
+          { "value": "overline", "label": "Overline" },
+          { "value": "line-through", "label": "Line-through" }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "custom-subhead-font-weight",
+        "label": "Custom subhead font weight",
+        "options": [
+          { "value": "400", "label": "Normal" },
+          { "value": "500", "label": "Medium" },
+          { "value": "600", "label": "Semi Bold" },
+          { "value": "700", "label": "Bold" }
+        ],
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "custom-subhead-font-style",
+        "label": "Custom subhead font style",
+        "options": [
+          { "value": "normal", "label": "Normal" },
+          { "value": "italic", "label": "Italic" }
+        ],
+        "default": "normal"
+      },
+      {
+        "type": "checkbox",
+        "id" : "add-custom-styling",
+        "label":"add custom styling",
         "default": false
       }
+     
       
     ],
     "blocks": [
@@ -589,9 +676,21 @@
             "label": "Font Weight",
             "options": [
               { "value": "400", "label": "Normal" },
+              { "value": "500", "label": "Medium" },
+              { "value": "600", "label": "Semi Bold" },
               { "value": "700", "label": "Bold" }
             ],
             "default": "400"
+          },
+          {
+            "type": "select",
+            "id": "special_text_font_style",
+            "label": "Special Text Font Style",
+            "options": [
+              { "value": "normal", "label": "Normal" },
+              { "value": "italic", "label": "Italic" }
+            ],
+            "default": "normal"
           },
           {
             "type": "color",

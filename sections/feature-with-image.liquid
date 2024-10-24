@@ -5,6 +5,8 @@
     background-color: {{ section.settings.background_color }};
     padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
   }
+  
+
 
   .feature-with-image__container {
     max-width: 1200px;
@@ -48,8 +50,22 @@
           font-weight: {{ block.settings.font_weight }};
           text-align: {{ block.settings.text_align }};
           max-width: {{ block.settings.max_width }}px;
+          width:100%;
           padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
         }
+
+        #shopify-section-{{ section.id }} .custom-subtitle {
+          {% if block.settings.remove-subtitle-margin %}
+                  margin:0;
+          {% endif %}
+
+          text-decoration: {{ block.settings.subtitle-decoration }};
+          font-style:  {{ block.settings.subtitle-font-style }};
+          line-height: 1.5;
+        }
+
+        
+
       {% when 'title' %}
         #shopify-section-{{ section.id }} .feature-with-image__title {
           color: {{ block.settings.color }};
@@ -57,7 +73,34 @@
           font-weight: {{ block.settings.font_weight }};
           text-align: {{ block.settings.text_align }};
           max-width: {{ block.settings.max_width }}px;
+          width:100%;
           padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
+        }
+        #shopify-section-{{ section.id }} .custom-bullet {
+          position: relative;
+        }
+        
+        #shopify-section-{{ section.id }} .custom-bullet::before {
+          content: '•';
+          color:  {{ block.settings.color }};
+          font-size: 18px; 
+          line-height: 1; 
+          vertical-align: middle;
+        }
+      
+        #shopify-section-{{ section.id }} .custom-title-main{
+          line-height: 1.5;
+        }
+
+        #shopify-section-{{ section.id }} .custom-title-pre-text
+        {
+          text-decoration : {{ block.settings.pre-title-text-decoration }};
+        }
+
+        #shopify-section-{{ section.id }} .custom-title {
+          {% if block.settings.remove-title-margin %}
+                  margin:0;
+          {% endif %}
         }
       {% when 'description' %}
         #shopify-section-{{ section.id }} .feature-with-image__description {
@@ -76,7 +119,7 @@
     {% endcase %}
   {% endfor %}
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .feature-with-image {
       padding: 40px 15px;
     }
@@ -103,13 +146,24 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'subtitle' %}
-          <h3 class="feature-with-image__subtitle" {{ block.shopify_attributes }}>
+          <h3 class="custom-subtitle feature-with-image__subtitle" {{ block.shopify_attributes }}>
             {{ block.settings.text }}
           </h3>
         {% when 'title' %}
-          <div class="feature-with-image__title" {{ block.shopify_attributes }}>
+          {% if block.settings.add-built-in-title %}
+          <div class="custom-title feature-with-image__title" {{ block.shopify_attributes }}>
             {{ block.settings.text }}
           </div>
+          {% endif %}
+
+          {% if block.settings.add-custom-title %}
+            <p class="custom-title-main custom-title feature-with-image__title
+               {% if block.settings.add-custom-bullets %} custom-bullet {% endif %}">
+              <span class="custom-title-pre-text ">{{ block.settings.custom-title-pre-text }}</span>
+              <span class="custom-title-text">{{ block.settings.custom-title-text }}</span>
+            </p>
+          {% endif %}
+
         {% when 'description' %}
           <div class="feature-with-image__description" {{ block.shopify_attributes }}>
             {{ block.settings.text }}
@@ -193,6 +247,34 @@
       "name": "Subtitle",
       "settings": [
         {
+          "type": "select",
+          "id": "subtitle-decoration",
+          "label": "Subtitle Decoration",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "underline", "label": "Underline" },
+            { "value": "overline", "label": "Overline" },
+            { "value": "line-through", "label": "Line-through" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "subtitle-font-style",
+          "label": "Subtitle font style",
+          "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "italic", "label": "Italic" }
+          ],
+          "default": "normal"
+        },
+        {
+          "type": "checkbox",
+          "id" : "remove-subtitle-margin",
+          "label": "Remove subtitle margin",
+          "default": false
+        },
+        {
           "type": "text",
           "id": "text",
           "label": "Subtitle Text",
@@ -220,6 +302,8 @@
           "label": "Font Weight",
           "options": [
             { "value": "400", "label": "Normal" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semi Bold" },
             { "value": "700", "label": "Bold" }
           ],
           "default": "700"
@@ -292,6 +376,52 @@
       "name": "Title",
       "settings": [
         {
+          "type": "checkbox",
+          "id" : "add-built-in-title",
+          "label": "Add built in title",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id" : "add-custom-title",
+          "label": "Add custom title",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id" : "add-custom-bullets",
+          "label": "Add custom bullets before text",
+          "default": false
+        },
+        {
+          "type": "textarea",
+          "id": "custom-title-pre-text",
+          "label": "Custom title Pre text",
+        },
+        {
+          "type": "select",
+          "id": "pre-title-text-decoration",
+          "label": "Pre title Decoration",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "underline", "label": "Underline" },
+            { "value": "overline", "label": "Overline" },
+            { "value": "line-through", "label": "Line-through" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "textarea",
+          "id": "custom-title-text",
+          "label": "Custom title text",
+        },
+        {
+          "type": "checkbox",
+          "id" : "remove-title-margin",
+          "label": "Remove title margin",
+          "default": false
+        },
+        {
           "type": "textarea",
           "id": "text",
           "label": "Title Text",
@@ -316,9 +446,11 @@
         {
           "type": "select",
           "id": "font_weight",
-          "label": "Font Weight",
+          "label": "Title Font Weight",
           "options": [
             { "value": "400", "label": "Normal" },
+            { "value": "500", "label": "Medium" },
+            { "value": "600", "label": "Semi Bold" },
             { "value": "700", "label": "Bold" }
           ],
           "default": "400"
